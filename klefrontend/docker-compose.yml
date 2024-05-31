@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: klefrontend
+    ports:
+      - "81:81"
+    volumes:
+      - .:/var/www
+    networks:
+      - klefrontend-network
+    environment:
+      - LC_ALL=tr_TR.UTF-8
+      - LANG=tr_TR.UTF-8
+
+networks:
+  klefrontend-network:
