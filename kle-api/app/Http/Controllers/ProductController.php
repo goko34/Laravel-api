@@ -16,13 +16,6 @@ class ProductController extends Controller
     public function index()
     {
         try {
-            // if (!auth()->check()) {
-            //     return response()->json([
-            //         'status' => 'error',
-            //         'message' => 'Giriş yapmadan bu sayfaya erişemezsiniz'
-            //     ],401);
-            // }
-
             $products = Product::all();
 
             return response()->json([
