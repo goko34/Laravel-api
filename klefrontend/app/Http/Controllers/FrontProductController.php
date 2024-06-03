@@ -26,12 +26,11 @@ class FrontProductController extends Controller
     }
 
 
-    // FrontProductController.php
 
     public function create()
     {
         try {
-            // Session'de token bilgisini kontrol edelim
+
             if (!session('token')) {
                 return redirect()->route('login')->with('error', 'Ürün oluşturmak için giriş yapmalısınız.');
             }
